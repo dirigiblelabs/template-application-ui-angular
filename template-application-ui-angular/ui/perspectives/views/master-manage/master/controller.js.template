@@ -172,7 +172,7 @@ angular.module('page')
 				toggleEntityModal();
 				$messageHub.messageEntityModified();
 			}, function(data) {
-				alert(JSON.stringify(data));
+				alert(JSON.stringify(data.data));
 			});
 		}
 	};
@@ -189,7 +189,7 @@ angular.module('page')
 				toggleEntityModal();
 				$messageHub.messageEntityModified();
 			}, function(data) {
-				alert(JSON.stringify(data));
+				alert(JSON.stringify(data.data));
 			})
 		}
 	};
