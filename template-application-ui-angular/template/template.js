@@ -134,7 +134,6 @@ exports.generate = function (model, parameters) {
                     generatedFiles = generatedFiles.concat(generateCollection(generationEngine, content, template, model, uiListModels, parameters));
                     break;
                 case "uiManageMasterModels":
-                    debugger
                     generatedFiles = generatedFiles.concat(generateCollection(generationEngine, content, template, model, uiManageMasterModels, parameters));
                     break;
                 case "uiListMasterModels":
@@ -220,63 +219,24 @@ exports.getTemplate = function (parameters) {
 function getTemplateParameters() {
     return [
         {
-            name: "extensionName",
-            label: "Extension",
-            placeholder: "Extension name"
+            name: "brand",
+            label: "Brand",
+            placeholder: "Enter Brand"
         },
         {
-            name: "includeLaunchpad",
-            label: "Embedded",
-            type: "checkbox"
-        },
-        {
-            name: "launchpadName",
-            label: "Launchpad",
-            placeholder: "Launchpad project name",
-            ui: {
-                hide: {
-                    property: "includeLaunchpad",
-                    value: true
-                }
-            }
+            name: "brandUrl",
+            label: "Brand URL",
+            placeholder: "Enter Brand URL"
         },
         {
             name: "title",
             label: "Title",
-            placeholder: "Launchpad title",
-            ui: {
-                hide: {
-                    property: "includeLaunchpad",
-                    value: false
-                }
-            }
-        },
-        {
-            name: "subTitle",
-            label: "Sub-title",
-            placeholder: "Launchpad sub-title",
-            ui: {
-                hide: {
-                    property: "includeLaunchpad",
-                    value: false
-                }
-            }
+            placeholder: "Enter Title"
         },
         {
             name: "description",
             label: "Description",
-            placeholder: "Launchpad description",
-            ui: {
-                hide: {
-                    property: "includeLaunchpad",
-                    value: false
-                }
-            }
-        },
-        {
-            name: "brand",
-            label: "Brand",
-            placeholder: "Brand"
+            placeholder: "Enter Description"
         }
     ];
 }
