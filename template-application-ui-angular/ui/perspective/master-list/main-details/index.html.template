@@ -19,15 +19,6 @@
     <body class="dg-vbox" dg-contextmenu="contextMenuContent">
 
         <fd-scrollbar class="dg-full-height">
-            <div class="fd-margin--md fd-message-strip fd-message-strip--error fd-message-strip--dismissible"
-                role="alert" ng-show="errorMessage">
-                <p class="fd-message-strip__text">{{ errorMessage }}</p>
-                <button class="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
-                    aria-label="Close" ng-click="clearErrorMessage()">
-                    <i class="sap-icon--decline"></i>
-                </button>
-            </div>
-
             <fd-fieldset class="fd-margin--md" ng-form="formFieldset">
                 <fd-form-group dg-header="${name} Details" name="entityForm">
 #foreach ($property in $properties)
@@ -116,7 +107,7 @@
                             ng-model="entity.${property.name}"
                             ng-readonly="true"
                             type="datetime-local">
-                            </fd-input>
+                        </fd-input>
                     </fd-form-item>
 #elseif($property.widgetType == "DATE")
                     <fd-form-item horizontal="false">
@@ -206,6 +197,8 @@
 #end
 #end
 #end
+
+                </fd-form-group>
             </fd-fieldset>
         </fd-scrollbar>
 
