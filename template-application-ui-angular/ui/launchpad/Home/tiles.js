@@ -13,7 +13,8 @@ for (let i = 0; tileExtensions !== null && i < tileExtensions.length; i++) {
     tiles[tile.group].push({
         name: tile.name,
         location: tile.location,
-        description: tile.description,
+        caption: tile.caption,
+        tooltip: tile.tooltip,
         order: tile.order
     });
 }
